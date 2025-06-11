@@ -33,7 +33,7 @@ public class BillingSystem {
         for (int i = 0; i < n; i++) {
             System.out.println("\nEnter details for item " + (i + 1) + ":");
             System.out.print("Item name: ");
-            scanner.nextLine(); // consume leftover newline
+            scanner.nextLine(); 
             String name = scanner.nextLine();
             System.out.print("Quantity: ");
             int qty = scanner.nextInt();
@@ -43,7 +43,7 @@ public class BillingSystem {
             cart[count++] = new Item(name, qty, price);
         }
 
-        // Print Bill
+        
         double grandTotal = 0;
         System.out.println("\n🧾 Final Bill:");
         System.out.printf("%-15s %-10s %-10s %-10s\n", "Item Name", "Quantity", "Price", "Total");
@@ -54,7 +54,7 @@ public class BillingSystem {
             grandTotal += cart[i].getTotal();
         }
 
-        double tax = grandTotal * 0.05; // 5% tax
+        double tax = grandTotal * 0.05; 
         double netAmount = grandTotal + tax;
 
         System.out.println("-------------------------------------------------");
